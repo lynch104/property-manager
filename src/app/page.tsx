@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Building2, Users, TrendingUp, TrendingDown, AlertCircle, DollarSign } from "lucide-react";
+import { Building2, Users, TrendingUp, TrendingDown, AlertCircle, DollarSign, BarChart3 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatCurrency, getMonthName } from "@/lib/utils";
 import {
@@ -86,6 +86,7 @@ export default function DashboardPage() {
           <CardContent>
             {chartData.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-48 text-gray-400">
+                <BarChart3 className="h-10 w-10 mb-2 opacity-30" />
                 <p className="text-sm text-center">No data yet — add payments and expenses to see your chart</p>
               </div>
             ) : (
